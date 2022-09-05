@@ -1,9 +1,9 @@
 #!/bin/bash
 
-ECHO ""
-ECHO "MAX: Starting cmake"
+echo ""
+echo "MAX: Starting cmake"
 cmake .
 
-ECHO ""
-ECHO "MAX: Starting make"
+echo ""
+echo "MAX: Starting make"
 make
