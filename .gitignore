@@ -1,0 +1,13 @@
+# Apple directory store
+**/.DS_Store
+
+# My build directory
+build/
+
+# Default CLion build directories.
+cmake-build-*/
+
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+Makefile
