@@ -6,4 +6,4 @@ cmake .
 
 echo ""
 echo "MAX: Starting make"
-make
+cmake --build .
