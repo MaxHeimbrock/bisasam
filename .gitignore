@@ -11,3 +11,8 @@ CMakeFiles
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+
+# CLion
+.idea/
+*.cbp
+Testing/
