@@ -24,12 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       # Runs a single command using the runners shell
       - name: build
         run: ./build.sh
-     
-      # Runs a single command using the runners shell
-      - name: run
-        run: ./build/Tutorial
-      
