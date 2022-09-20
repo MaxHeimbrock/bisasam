@@ -15,6 +15,10 @@ add_executable(Tutorial "${source_dir}/Main.cpp")
 target_include_directories(Tutorial PRIVATE ${CMAKE_BINARY_DIR}/extern/Crow/include)
 target_include_directories(Tutorial PRIVATE ${CMAKE_BINARY_DIR}/extern/asio/asio/include)
 
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+target_link_libraries(Tutorial PRIVATE Threads::Threads)
+
 # using installed Crow directory, which also finds asio for me
 # find_package(Crow)
 # target_link_libraries(Tutorial PUBLIC Crow::Crow)
