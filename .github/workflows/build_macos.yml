@@ -26,5 +26,14 @@ jobs:
           submodules: recursive
 
       # Runs a single command using the runners shell
-      - name: build
+      - name: Build
         run: ./build.sh
+
+      - name: Test Run
+        run: ./build/tests -r java-junit >> test_results.xml
+
+      - name: Test Report
+        uses: phoenix-actions/test-reporting@v8
+        with:
+          path: test_results.xml    # Path to test results
+          reporter: java-junit
