@@ -16,3 +16,9 @@ Makefile
 .idea/
 *.cbp
 Testing/
+
+# Git FetchContent folders
+_deps/
+CPackConfig.cmake
+CPackSourceConfig.cmake
+generated-includes/
