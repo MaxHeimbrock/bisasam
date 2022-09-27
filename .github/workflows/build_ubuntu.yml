@@ -32,10 +32,12 @@ jobs:
       # Runs the tests and writes result to file
       - name: Test Run
         run: ./build/tests -r JUnit >> test_results.xml
+        continue-on-error: true
 
       - name: Test Report
         uses: phoenix-actions/test-reporting@v8
-        if: success() || failure() 
+        continue-on-error: true
+        if: success() || failure()
         with:
           name: Basic Tests
           path: test_results.xml
