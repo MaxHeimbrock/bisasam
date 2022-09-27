@@ -35,6 +35,7 @@ jobs:
 
       - name: Test Report
         uses: phoenix-actions/test-reporting@v8
+        if: success() || failure() 
         with:
           name: Basic Tests
           path: test_results.xml
