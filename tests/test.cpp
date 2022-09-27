@@ -21,5 +21,5 @@ TEST_CASE( "Initial test", "[crow]" ) {
         return "Hello Max from Crow";
     });
 
-    REQUIRE( 1 == 0 );
+    REQUIRE( 1 == 1 );
 }

@@ -39,6 +39,6 @@ jobs:
         continue-on-error: true
         if: success() || failure()
         with:
-          name: Basic tests ubuntu
+          name: Basic tests
           path: test_results.xml
           reporter: java-junit
