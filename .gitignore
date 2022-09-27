@@ -22,3 +22,6 @@ _deps/
 CPackConfig.cmake
 CPackSourceConfig.cmake
 generated-includes/
+
+# My test results
+test_results.xml

@@ -28,3 +28,14 @@ jobs:
       # Runs a single command using the runners shell
       - name: build
         run: ./build.sh
+
+      # Runs the tests and writes result to file
+      - name: Test Run
+        run: ./build/tests -r JUnit >> test_results.xml
+
+      - name: Test Report
+        uses: phoenix-actions/test-reporting@v8
+        with:
+          name: Basic Tests
+          path: test_results.xml
+          reporter: java-junit
