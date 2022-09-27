@@ -1,5 +1,4 @@
-// #include "crow.h"
-#include "../extern/Crow/include/crow.h" // for using extern header include folder
+#include "crow.h"
 
 int main()
 {

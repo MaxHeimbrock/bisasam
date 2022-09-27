@@ -30,6 +30,8 @@ FetchContent_MakeAvailable(Catch2)
 
 add_executable(tests ${PROJECT_SOURCE_DIR}/tests/test.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+target_include_directories(tests PRIVATE ${CMAKE_BINARY_DIR}/extern/Crow/include)
+target_include_directories(tests PRIVATE ${CMAKE_BINARY_DIR}/extern/asio/asio/include)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
